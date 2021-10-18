@@ -86,15 +86,17 @@ function removeC() {
 //sets global var for selected color
 function selected(){
     colorSelected = document.getElementById("selectedID").value;
-    console.log(colorSelected);
+    return colorSelected;
 }
 
 function fill(){
-    alert("Clicked Fill All")
+	let table = document.getElementById("grid");
+	table.querySelectorAll('td').forEach(td => td.style.backgroundColor = selected());
 }
 
 function clearAll(){
-    alert("Clicked Clear All")
+	let table = document.getElementById("grid");
+	table.querySelectorAll('td').forEach(td => td.style.backgroundColor = 'white');
 }
 
 function fillU(){
