@@ -110,7 +110,7 @@ function removeC() {
 		var numrows = document.getElementById("grid").rows.length;
 		var rowlength = document.getElementById("grid").rows[0].cells.length;
 		for(var r=0; r<numrows; r++){
-			table.rows[r].deleteCell(0);
+			table.rows[r].deleteCell(rowlength-1);
 		}
 		numCols = numCols-1;
 	}
