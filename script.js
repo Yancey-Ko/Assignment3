@@ -141,9 +141,16 @@ function clearAll(){
 	table.querySelectorAll('td').forEach(td => td.style.backgroundColor = 'white');
 }
 
-function fillU(){
-    alert("Clicked Fill All Uncolored")
-}
+function fillU() {
+    let row = document.getElementsByTagName("td");
+    for (let i = 0; i < row.length; i++) {
+        let cells = row[i].style;
+        let bg = cells.backgroundColor;
+        if (bg === "") { 
+            document.querySelectorAll("td")[i].style.backgroundColor = colorSelected;
+        }
+     }
+  }
 
 function fillClick(event){
 	if(event.target.nodeName.toLowerCase() === 'td'){
