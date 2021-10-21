@@ -13,7 +13,7 @@ function addR() {
 		var cells = row.insertCell(0);
 		numRows=1;
 		numCols=1;
-		cells.innerHTML = numRows + " " + numCols;
+		//cells.innerHTML = numRows + " " + numCols;
 	}
 	//ifrowwasdeletedwithlefovercolumns
 	else if (numCols > 0 && numRows < 1){
@@ -21,7 +21,7 @@ function addR() {
 		var cells = row.insertCell(0);
 		numRows=1;
 		numCols=1;
-		cells.innerHTML = numRows + " " + numCols;
+		//cells.innerHTML = numRows + " " + numCols;
 	}
 	//ifcolwasdeletedwithlefoverrows
 	else if (numCols < 1){
@@ -29,7 +29,7 @@ function addR() {
 		var cells = row.insertCell(0);
 		numRows=numRows+1;
 		numCols=numCols+1;
-		cells.innerHTML = numRows + " " + numCols;
+		//cells.innerHTML = numRows + " " + numCols;
 	}
 	//ifmorethan1cell
 	else if (numCols > 0 && numRows > 0){
@@ -38,7 +38,7 @@ function addR() {
 		numRows=numRows+1;
 		for(var x=0; x<rowlength; x++){
 			var cells = newrow.insertCell(x);
-			cells.innerHTML = numRows + " " + numCols;
+			//cells.innerHTML = numRows + " " + numCols;
 		}
 	}
 }
@@ -52,7 +52,7 @@ function addC() {
 		var cells = row.insertCell(0);
 		numRows=1;
 		numCols=1;
-		cells.innerHTML = numRows + " " + numCols;
+		//cells.innerHTML = numRows + " " + numCols;
 	}
 	//ifatleast1cell
 	else {
@@ -62,7 +62,7 @@ function addC() {
 			var cells = table.rows[x].insertCell(rowlength);
 		}
 		numCols=numCols+1;
-		cells.innerHTML = numRows + " " + numCols;
+		//cells.innerHTML = numRows + " " + numCols;
 	}
 }
 
