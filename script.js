@@ -1,6 +1,7 @@
 let numRows = 0;
 let numCols = 0;
 let colorSelected; 
+let table = document.getElementById("grid");
 
 //Add a row
 function addR() {
@@ -130,17 +131,23 @@ function selected(){
     colorSelected = document.getElementById("selectedID").value;
     return colorSelected;
 }
-
+//grabs all elements and changes it to the selected color
 function fill(){
-	let table = document.getElementById("grid");
 	table.querySelectorAll('td').forEach(td => td.style.backgroundColor = selected());
 }
 
+//grabs all elements in and changes the color to white
 function clearAll(){
-	let table = document.getElementById("grid");
 	table.querySelectorAll('td').forEach(td => td.style.backgroundColor = 'white');
 }
 
 function fillU(){
     alert("Clicked Fill All Uncolored")
 }
+
+function fillClick(event){
+	if(event.target.nodeName.toLowerCase() === 'td'){
+		event.target.style.backgroundColor = selected();
+	}
+}
+table.addEventListener("click", fillClick);
